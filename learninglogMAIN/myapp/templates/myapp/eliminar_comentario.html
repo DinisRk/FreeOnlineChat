@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Eliminación</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>¿Estás seguro de que deseas eliminar este comentario?</h2>
+        <p>{{ comentario.content }}</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+            <a href="{% url './entrada.html' %}" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+</body>
+</html>
+
