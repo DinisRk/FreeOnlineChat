@@ -24,6 +24,7 @@ def inicio(request):
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
+        user.save()
         if user is not None:
             login(request, user)
             return redirect('myapp:entrada')  # Redirigir al usuario a la página de inicio después del inicio de sesión
@@ -43,6 +44,8 @@ def inicio(request):
 #     else:
 #         form = UserCreationForm()
 #     return render(request, './myapp/registro.html', {'form': form})
+
+
 
 def registro(request):
     if request.method != 'POST':
@@ -74,7 +77,7 @@ def entrada(request):
             # Guardar el comentario y asociarlo con el usuario actual
             comment = form.save(commit=False)
             if request.user.is_authenticated:
-                comment.user = request.user
+                comment.user= request.user
                 
             comment.created_at = timezone.now()
             comment.save()

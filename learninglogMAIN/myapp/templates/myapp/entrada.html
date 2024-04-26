@@ -49,7 +49,7 @@
                               <div style="background-color: lightgray; border-radius: 10px; padding: 15px;">
                                   <div class="foto, n nombre usuario y fecha" style="display:ruby-text;"> 
                                     <img src="https://static.vecteezy.com/system/resources/previews/026/530/210/non_2x/modern-person-icon-user-and-anonymous-icon-vector.jpg" style="width: 40px; border-radius: 30px;">
-                                    <p style="background-color: #f38686; padding: 5px; border-radius: 10px;">Name: {{ comment.username }} </p>
+                                    <p style="background-color: #f38686; padding: 5px; border-radius: 10px;">Name: {{ comment.user.username }} </p>
                                     <p>| Date: {{ comment.created_at }}</p>
                                   </div>
                                   {{ comment.content }}
