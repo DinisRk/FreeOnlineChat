@@ -19,12 +19,14 @@
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup"  ">
                           <div class="navbar-nav" >
                             <a class="nav-item nav-link " href="../home.html">Home <span class="sr-only">(current)</span></a>
-                            <a class="nav-item nav-link active" href="../entrada.html">Comments</a>
+                            <a class="nav-item nav-link active" href="../entrada.html">Chat</a>
+                            <a class="nav-item nav-link btn-danger " href="../">Salir</a>
+                            
                           </div>
                         </div>
                       </nav>
                     <div class="card text-black" style="border-radius: 25px; margin-bottom: 10px;">
-                        <h1 style="margin: 5px auto;">Comments</h1>
+                        <h1 style="margin: 5px auto;">Chat</h1>
                     
                         <div class="card-body p-md-5" ">
                             <form method="post">
@@ -49,8 +51,8 @@
                               <div style="background-color: lightgray; border-radius: 10px; padding: 15px;">
                                   <div class="foto, n nombre usuario y fecha" style="display:ruby-text;"> 
                                     <img src="https://static.vecteezy.com/system/resources/previews/026/530/210/non_2x/modern-person-icon-user-and-anonymous-icon-vector.jpg" style="width: 40px; border-radius: 30px;">
-                                    <p style="background-color: #f38686; padding: 5px; border-radius: 10px;">Name: {{ comment.user.username }} </p>
-                                    <p>| Date: {{ comment.created_at }}</p>
+                                    <p style="background-color: #f38686; padding: 5px; border-radius: 10px;">Nombre: {{ comment.user.username }} </p>
+                                    <p>| Fecha: {{ comment.created_at }}</p>
                                   </div>
                                   {{ comment.content }}
                                   <form action="{% url 'myapp:editar_comentario' comment.id %}" method="post" style="display: inline;">

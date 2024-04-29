@@ -11,6 +11,8 @@ path('entrada.html', views.entrada, name='entrada'),
 path('eliminar_comentario.html/<int:comments_id>/', views.eliminar_comentario, name='eliminar_comentario'), # Corregido el patrón de URL
 path('editar_comentario.html/<int:comments_id>/', views.editar_comentario, name='editar_comentario'), # Corregido el patrón de URL
 path('home.html', views.home, name='home'),
+path('window.html', views.window, name='window'),
+
 
 
 
