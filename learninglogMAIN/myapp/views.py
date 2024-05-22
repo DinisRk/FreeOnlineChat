@@ -127,4 +127,4 @@ def home(request):
 
 def window(request):
     return render(request, './myapp/window.html')
-    
+     
